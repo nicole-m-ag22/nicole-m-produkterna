@@ -4,10 +4,11 @@
   font-family: 'League Spartan', sans-serif;
 }
 
-/*plm de background img ca nu vrea sa mearga in nicun fel :((*/
+
 .header {
   min-height: 100vh;
   width: 100%;
+ /* background-image: url('../img/banner.png'); */
   background-position: center;
   background-size: cover;
   position: relative;
@@ -31,7 +32,6 @@ nav {
   text-align: right;
 }
 
-/*
 .nav-links ul li{
   list-style: none;
   display: inline-block;
@@ -43,14 +43,14 @@ nav {
   content: '';
   width: 0%;
   height: 2px;
-  background: #8E78BB;
+  background:#DDCDFF;
   display: block;
   margin: auto;
   transition: 0.4s;
 }
 
 .nav-links ul li:hover::after, .preview-products p:hover::after{
-  width: auto;
+  width: 100%;
 }
 
  .nav-links ul li a {
@@ -58,34 +58,37 @@ nav {
   font-size: 20px;
   font-weight: 600;
   color: #DDCDFF;
-  padding: 15px;
 } 
 
+.dropdown-menu {
+  display: none;
+}
 
-.nav-links ul li:hover {
+.nav-links ul li:hover .dropdown-menu {
   display: block;
   position: absolute;
   background-color: #DDCDFF;
-  border-radius: 18px;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-left: -15px;
 }
 
-.nav-links ul li:hover {
+.dropdown-menu a {
+  color: #8E78BB !important;
+}
+
+.nav-links ul li:hover .dropdown-menu ul {
   display: block;
   margin: 10px;
 }
 
-
-.nav-links ul li:hover {
+.nav-links ul li:hover .dropdown-menu ul li {
   width: 150px;
   padding: 10px;
-  border-bottom: 3px double #8E78BB;
+  border-bottom: 1px double #3f2d64;
   background: transparent;
   border-radius: 0;
   text-align: left;
 }
-*/
 
 .text-box{
   width:80%;
@@ -151,7 +154,7 @@ nav {
   left:50%;
   transform: translate(-50%,-50%);
   text-align: center;
-  margin: 14px 32px;
+  margin: 2%;
 }
 
 .contact h2 {
@@ -166,7 +169,6 @@ nav {
 }
 
 .contact-column {
-  flex-grow: 1;
   height: 150px;
   background-color: rgb(221, 205, 255, 0.7);
   border: 5px;
@@ -204,5 +206,102 @@ nav {
 .preview-products-img {
   display: flex;
   justify-content: space-around
+}
+
+.page-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #8E78BB;
+  text-align: center;
+  margin: 40px;
+}
+
+.planets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5% 10%;
+}
+
+.products-planets {
+  width: 32%;
+  padding-bottom: 18%; 
+  margin-bottom: 2%; 
+}
+
+.stars-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5% 10%;
+}
+
+.products-stars{
+  width: 32%;
+  padding-bottom: 32%; 
+  margin-bottom: 2%; 
+  position: relative;
+}
+
+.moons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5% 10%;
+}
+
+.products-moons {
+  width: 46%;
+  height: 100px;
+  margin-bottom: 2%;
+}
+
+.products-moons:nth-child(3n) {
+  width: 100%;
+}
+
+.nebulas-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 600px;
+}
+
+.products-nebulas {
+  width: 32%;
+  margin-bottom: 2%; 
+}
+
+.products-nebulas:nth-child(3n+1) {
+   order: 1;
+ }
+
+.products-nebulas:nth-child(3n+2) { 
+  order: 2;
+}
+
+.products-nebulas:nth-child(3n) { 
+  order: 3; 
+}
+
+.nebulas-container::before, .nebulas-container::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+
+.about-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-text {
+  margin-bottom: 2%;
+}
+
+.about-img {
+  width: 40%;
+  height: auto;
 }
 /*comentari is pentru sa explici chesti importante ce si de cenu sa fi tu proasta pe main*/
