@@ -37,7 +37,7 @@ nav {
   padding: 8px 12px;
   position: relative;
 }
-/*i wanted the same animation on two different sections so i set the classes togheter*/
+/*hade samma animation på två ställe så jag satte klasserna ihop*/
 .nav-links ul li::after, .preview-products p::after {
   content: '';
   width: 0%;
@@ -72,7 +72,7 @@ nav {
 }
 
 .dropdown-menu a {
-  color: #8E78BB !important;
+  color: #8E78BB !important; /*element med !important har högst prioritet*/
 }
 
 .dropdown-menu li {
@@ -83,6 +83,7 @@ nav {
   text-align: left;
 }
 
+/*targets only last child*/
 .dropdown-menu li:last-child {
   border-bottom: none;
 }
@@ -137,7 +138,7 @@ nav {
   margin-bottom: 20px;
   font-weight: 300;
 }
-
+/*flexbox container*/
 .contact {
   display: flex;
   justify-content: space-between;
@@ -163,6 +164,7 @@ nav {
   margin-top: 30px;
 }
 
+/*flexbox item*/
 .contact-column {
   height: 150px;
   background-color: rgb(63, 45, 100, 0.6);
@@ -185,6 +187,7 @@ nav {
   color: #8E78BB;
 }
 
+/*targets only first child*/
 .preview-products:first-child{
   margin-top: 50px;
 }
@@ -227,7 +230,7 @@ nav {
 .stars-container {
   display: flex;
   flex-flow: wrap row;
-  /*flex flow is shorthand for flex-direction and flex-wrap*/
+  /*flex flow är förkortning för flex-direction and flex-wrap*/
   justify-content: space-between;
   margin-right: 5%;
   margin-left: 5%;
@@ -251,6 +254,7 @@ nav {
   height: inherit;
 }
 
+/*targets every 3rd child*/
 .products-moons:nth-child(3n) {
   width: 100%;
   margin-left: 30%;
@@ -284,7 +288,7 @@ nav {
   text-align: center;
 }
 
-/*i found the moon shape on css-tricks.com but the animation was made entirely by me*/
+/*hittade månformen på css-tricks.com*/
 .moon {
   width: 80px;
   height: 80px;
@@ -294,7 +298,7 @@ nav {
   margin-top: 5%;
   animation-name: eclipse;
   animation-duration: 3s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; /*den elementen gör att animationen återställs inte*/
 }
 
 @keyframes eclipse {
@@ -304,6 +308,3 @@ nav {
   85% {box-shadow: 5px 5px 0 0 white;}
   100% {box-shadow: 0px 0px 0 0 white; left:48%;}
 }
-
-
-/*comentari is pentru sa explici chesti importante ce si de cenu sa fi tu proasta pe main */
